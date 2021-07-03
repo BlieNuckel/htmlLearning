@@ -49,4 +49,6 @@ ul{
 .maintruckimg{
     height: auto;
     width: 100vw;
+    overflow: hidden;
+    object-fit: cover;
 }
