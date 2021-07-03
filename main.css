@@ -47,8 +47,20 @@ ul{
 }
 
 .maintruckimg{
-    height: auto;
-    width: 100vw;
+    background-image: url("img/generictruckfuck.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 40vh;
+    width: 100%;
     overflow: hidden;
     object-fit: cover;
+    filter: brightness(60%);
+    background-attachment: fixed;
+}
+
+.maintruckimg h1{
+    color: white;
+    text-align: center;
+    margin-top: 8%;
+    filter: brightness(150%);
 }
