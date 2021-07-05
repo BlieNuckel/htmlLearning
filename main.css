@@ -1,40 +1,52 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
-body{
+body {
     margin: 0;
     font-family: 'Roboto', sans-serif;
 }
 
-main{
+main {
     background-color: white;
+    margin-left: 10vw;
+    margin-right: 10vw;
+    margin-top: 7px;
 }
 
-nav{
+nav {
+    z-index: 1;
     top: 0;
+    position: relative;
 }
 
-a{
-    padding: 14px;
-    color: white;
+a {
     text-decoration: none;
+}
+
+.nav-button {
+    font-size: 1rem;
+    padding: 8px 9px;
+    color: white;
     display: block;
 }
 
-a:hover:not(.active){
+.nav-button:hover:not(.active):not(.no-highlight) {
     background-color: #111;
     color: silver;
+    border-radius: 5px;
 }
 
-li{
+li {
     float: left;
+    height: auto;
+    padding: 5px;
 }
 
-ul{
+ul {
     text-align: center;
     margin: 0;
     padding: 0;
     top: 0;
-    height: 47px;
+    height: 50px;
     width: 100%;
     background-color: #333;
     color: white;
@@ -42,6 +54,56 @@ ul{
     box-shadow: 0px 2px 5px gray;
 }
 
-.active{
+.active:not(.no-highlight) {
     background-color: rgb(0, 206, 103);
+    border-radius: 5px;
+}
+
+.grid-container {
+    margin-bottom: 20px;
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-gap: 10px;
+}
+
+.grid-item {
+    transition: all .05s ease-in-out;
+    color: white;
+    text-align: center;
+    white-space: nowrap;
+    padding: 100px;
+    width: 10vw;
+}
+
+.grid-item:hover {
+    transition: all .05s ease-in-out;
+    transform: scale(1.1, 1.1);
+}
+
+.item1 {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("img/daflogo.jpeg");
+    background-size: cover;
+    background-position: center;
+}
+
+.item2 {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("img/scanialogo.png");
+    background-size: cover;
+    background-position: center;
+}
+
+.item3 {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("img/manlogo.png");
+    background-size: cover;
+    background-position: center;
+}
+
+.roundcorners-5 {
+    border-radius: 5px;
+}
+
+.text-overflow-center {
+    margin-left: -100%;
+    margin-right: -100%;
 }
